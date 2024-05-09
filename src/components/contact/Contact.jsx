@@ -42,7 +42,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    axios.post('http://localhost:3001/api/send-email', formData)
+    axios.post('https://portfolio-mail-652h.onrender.com/api/send-email', formData)
       .then((response) => {
         console.log('Email sent successfully');
         setSuccess(true);
