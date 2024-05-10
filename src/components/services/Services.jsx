@@ -36,8 +36,7 @@ const Services = () => {
     <div className="services">
       <motion.div className="textContainer" initial={{ opacity: 0, y: 100 }} animate={textAnimation} transition={{ duration: 1 }}>
         <p>
-          At our law firm, we provide comprehensive legal solutions to protect
-          your rights and interests.
+          Welcome to our law firm, where we provide comprehensive legal solutions to protect your rights and interests. With a team of experienced lawyers, we are dedicated to serving you with professionalism and integrity.
         </p>
         <hr />
       </motion.div>
@@ -57,35 +56,30 @@ const Services = () => {
       </motion.div>
       <motion.div className="listContainer" initial={{ opacity: 0, y: 50 }} animate={listAnimation} transition={{ duration: 1 }}>
         <motion.div className="box" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <h2>Personal Injury</h2>
+          <h2>45+ Years of Experience</h2>
           <p>
-            Our personal injury attorneys fight for fair compensation for
-            victims of accidents and negligence.
+            Our seasoned lawyers have over 45 years of combined experience in various legal fields. Trust our expertise to handle your case effectively and efficiently.
           </p>
           <button>Consult Now</button>
         </motion.div>
         <motion.div className="box" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <h2>Criminal Defense</h2>
+          <h2>1000+ Clients Served</h2>
           <p>
-            Facing criminal charges? Our defense lawyers provide aggressive
-            representation to protect your rights and freedom.
+            We have successfully represented over 1000 clients, achieving favorable outcomes and ensuring their legal rights are protected. Join our satisfied clientele today.
           </p>
           <button>Get Legal Help</button>
         </motion.div>
         <motion.div className="box" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <h2>Family Law</h2>
+          <h2>Compassionate Family Law Support</h2>
           <p>
-            From divorce to child custody disputes, our family law attorneys
-            offer compassionate support and legal guidance during difficult
-            times.
+            From divorce proceedings to child custody disputes, our family law attorneys provide compassionate support and expert legal guidance during difficult times, ensuring your family's best interests are upheld.
           </p>
           <button>Learn More</button>
         </motion.div>
         <motion.div className="box" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <h2>Business Law</h2>
+          <h2>Strategic Business Law Solutions</h2>
           <p>
-            Our business lawyers assist with contracts, disputes, and other
-            legal matters to help your business thrive and succeed.
+            Our business lawyers offer strategic legal solutions to assist your company with contracts, disputes, and other legal matters. Let us help your business thrive and succeed.
           </p>
           <button>Consultation</button>
         </motion.div>

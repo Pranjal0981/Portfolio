@@ -1,0 +1,32 @@
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-icon {
+    font-size: 24px;
+    margin: 0 15px;
+}
+
+.footer-icon a {
+    color: #fff;
+    transition: transform 0.3s;
+}
+
+.footer-icon a:hover {
+    transform: translateY(-3px);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 16px;
+}

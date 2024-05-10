@@ -1,5 +1,6 @@
 import Test from "./Test";
 import "./app.scss";
+import Footer from "./components/Footer";
 import Contact from "./components/contact/Contact";
 import Cursor from "./components/cursor/Cursor";
 import Hero from "./components/hero/Hero";
@@ -29,6 +30,10 @@ const App = () => {
       <section id="Contact">
         <Contact />
       </section>
+      <div className="foot">
+
+        <Footer/>
+      </div>
       {/* Framer Motion Crash Course */}
       {/* <Test/>
     <Test/> */}
