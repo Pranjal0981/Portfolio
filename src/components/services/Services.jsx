@@ -1,65 +1,62 @@
-import { useRef } from "react";
+import React, { useEffect } from "react";
 import "./services.scss";
-import { motion, useInView } from "framer-motion";
-
-const variants = {
-  initial: {
-    x: -500,
-    y: 100,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
-  },
-};
+import { motion, useAnimation } from "framer-motion";
 
 const Services = () => {
-  const ref = useRef();
+  const textAnimation = useAnimation();
+  const titleAnimation = useAnimation();
+  const listAnimation = useAnimation();
 
-  const isInView = useInView(ref, { margin: "-100px" });
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      if (scrollPosition > windowHeight * 0.1) {
+        textAnimation.start({ opacity: 1, y: 0 });
+      }
+
+      if (scrollPosition > windowHeight * 0.5) {
+        titleAnimation.start({ opacity: 1, y: 0 });
+      }
+
+      if (scrollPosition > windowHeight * 0.8) {
+        listAnimation.start({ opacity: 1, y: 0 });
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [textAnimation, titleAnimation, listAnimation]);
 
   return (
-    <motion.div
-      className="services"
-      variants={variants}
-      initial="initial"
-      ref={ref}
-      animate={isInView ? "animate" : "initial"}
-    >
-      <motion.div className="textContainer" variants={variants}>
+    <div className="services">
+      <motion.div className="textContainer" initial={{ opacity: 0, y: 100 }} animate={textAnimation} transition={{ duration: 1 }}>
         <p>
           At our law firm, we provide comprehensive legal solutions to protect
           your rights and interests.
         </p>
         <hr />
       </motion.div>
-      <motion.div className="titleContainer" variants={variants}>
+      <motion.div className="titleContainer" initial={{ opacity: 0, y: 50 }} animate={titleAnimation} transition={{ duration: 1 }}>
         <div className="title">
           <img src="/dribbble.png" alt="" />
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>Experienced</motion.b>{" "}
-            Lawyers
+            <b>Experienced</b> Lawyers
           </h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>For Your</motion.b>{" "}
-            Legal Needs
+            <b>For Your</b> Legal Needs
           </h1>
           <button>LEARN MORE</button>
         </div>
       </motion.div>
-      <motion.div className="listContainer" variants={variants}>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
+      <motion.div className="listContainer" initial={{ opacity: 0, y: 50 }} animate={listAnimation} transition={{ duration: 1 }}>
+        <motion.div className="box" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <h2>Personal Injury</h2>
           <p>
             Our personal injury attorneys fight for fair compensation for
@@ -67,10 +64,7 @@ const Services = () => {
           </p>
           <button>Consult Now</button>
         </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
+        <motion.div className="box" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <h2>Criminal Defense</h2>
           <p>
             Facing criminal charges? Our defense lawyers provide aggressive
@@ -78,10 +72,7 @@ const Services = () => {
           </p>
           <button>Get Legal Help</button>
         </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
+        <motion.div className="box" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <h2>Family Law</h2>
           <p>
             From divorce to child custody disputes, our family law attorneys
@@ -90,10 +81,7 @@ const Services = () => {
           </p>
           <button>Learn More</button>
         </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
+        <motion.div className="box" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <h2>Business Law</h2>
           <p>
             Our business lawyers assist with contracts, disputes, and other
@@ -102,7 +90,7 @@ const Services = () => {
           <button>Consultation</button>
         </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 };
 
