@@ -61,7 +61,6 @@ const TeamMember = ({ member }) => {
           <div
             className={`textContainer mt ${isHovered ? "hovered" : ""}`}
             ref={ref}
-            onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
             <h2>{member.name}</h2>
@@ -73,7 +72,9 @@ const TeamMember = ({ member }) => {
                 <p>Phone: {member.phone}</p>
               </div>
             )}
-            <button>Contact {member.name}</button>
+            <button 
+              onMouseEnter={() => setIsHovered(true)}
+            >Contact {member.name}</button>
           </div>
         </div>
       </div>

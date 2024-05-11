@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div>
       <Cursor />
-      <section id="Homepage">
+      <section id="Home">
         <Navbar />
         <Hero />
       </section>
@@ -24,19 +24,23 @@ const App = () => {
       <section>
         <Services />
       </section>
-      
-
-      <section>
-        <Work/>
-        
+      <section id="Work">
+        <Parallax type="Work" />
       </section>
-      <Portfolio />
+      <section>
+        <Work />
+      </section>
+      <div id="Our Team">
+        <Portfolio />
+
+      </div>
+      
       <section id="Contact">
         <Contact />
       </section>
       <div className="foot">
 
-        <Footer/>
+        <Footer />
       </div>
       {/* Framer Motion Crash Course */}
       {/* <Test/>
