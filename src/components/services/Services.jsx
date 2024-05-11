@@ -42,7 +42,7 @@ const Services = () => {
       </motion.div>
       <motion.div className="titleContainer" initial={{ opacity: 0, y: 50 }} animate={titleAnimation} transition={{ duration: 1 }}>
         <div className="title">
-          <img src="/dribbble.png" alt="" />
+          <img src="https://m.media-amazon.com/images/I/516ejz7VgML._AC_UY1100_.jpg" alt=""  className="advocate"/>
           <h1>
             <b>Experienced</b> Lawyers
           </h1>
@@ -54,36 +54,7 @@ const Services = () => {
           <button>LEARN MORE</button>
         </div>
       </motion.div>
-      <motion.div className="listContainer" initial={{ opacity: 0, y: 50 }} animate={listAnimation} transition={{ duration: 1 }}>
-        <motion.div className="box" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <h2>45+ Years of Experience</h2>
-          <p>
-            Our seasoned lawyers have over 45 years of combined experience in various legal fields. Trust our expertise to handle your case effectively and efficiently.
-          </p>
-          <button>Consult Now</button>
-        </motion.div>
-        <motion.div className="box" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <h2>1000+ Clients Served</h2>
-          <p>
-            We have successfully represented over 1000 clients, achieving favorable outcomes and ensuring their legal rights are protected. Join our satisfied clientele today.
-          </p>
-          <button>Get Legal Help</button>
-        </motion.div>
-        <motion.div className="box" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <h2>Compassionate Family Law Support</h2>
-          <p>
-            From divorce proceedings to child custody disputes, our family law attorneys provide compassionate support and expert legal guidance during difficult times, ensuring your family's best interests are upheld.
-          </p>
-          <button>Learn More</button>
-        </motion.div>
-        <motion.div className="box" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <h2>Strategic Business Law Solutions</h2>
-          <p>
-            Our business lawyers offer strategic legal solutions to assist your company with contracts, disputes, and other legal matters. Let us help your business thrive and succeed.
-          </p>
-          <button>Consultation</button>
-        </motion.div>
-      </motion.div>
+     
     </div>
   );
 };

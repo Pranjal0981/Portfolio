@@ -2,7 +2,7 @@
 
 .parallax {
   width: 100%;
-  height: 100%;
+  height: 90%;
   position: relative;
   display: flex;
   align-items: center;
@@ -11,6 +11,10 @@
 
   h1 {
     font-size: 100px;
+    position: relative;
+    z-index: 100;
+    color: rgba(18, 219, 246, 0.944);
+
 
     @include mobile {
       font-size: 72px;
@@ -18,42 +22,33 @@
     }
   }
 
-  .mountains {
-    background-image: url("/supreme_court.jpeg");
-    background-size: cover;
-    background-position: bottom;
+  .mountains,
+  .planets,
+  .stars {
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 3;
+    top: 0;
+    left: 0;
+    background-position: bottom;
+    background-size: cover;
 
     @include mobile {
       background-size: contain;
       background-repeat: no-repeat;
     }
+  }
+
+  .mountains {
+    z-index: 3;
   }
 
   .planets {
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    position: absolute;
     z-index: 2;
-
-    @include mobile {
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
   }
 
   .stars {
-    background-image: url("/stars.png");
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
+    z-index: 11;
+    background-image: url("/supreme_court.jpeg");
   }
 }

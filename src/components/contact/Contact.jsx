@@ -92,7 +92,7 @@ const Contact = () => {
           onSubmit={sendEmail}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 4, duration: 1 }}
+          transition={{ delay: 1, duration: 0.2 }}
         >
           <input type="text" required placeholder="Name" name="user_name" value={formData.user_name} onChange={handleChange} />
           <input type="email" required placeholder="Email" name="user_email" value={formData.user_email} onChange={handleChange} />
