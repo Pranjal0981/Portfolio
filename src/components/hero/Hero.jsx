@@ -1,3 +1,4 @@
+import React from "react";
 import "./hero.scss";
 import { motion } from "framer-motion";
 
@@ -49,6 +50,14 @@ const rotationVariants = {
 };
 
 const Hero = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("Contact");
+    contactSection.scrollIntoView({ behavior: "smooth" });
+  };
+  const scrollToWork=()=>{
+    const Work=document.getElementById('Work')
+    Work.scrollIntoView({behavior:'smooth'})
+  }
   return (
     <div className="hero">
       <div className="wrapper">
@@ -59,14 +68,14 @@ const Hero = () => {
           animate="animate"
         >
           <motion.h2 variants={textVariants}>WE ARE ACV-LEGAL</motion.h2>
-          <motion.h1 variants={textVariants}>
-            "ACV - LEGAL"
-          </motion.h1>
+          <motion.h1 variants={textVariants}>"ACV - LEGAL"</motion.h1>
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
+            <motion.button variants={textVariants} onClick={scrollToWork}>
               See the Latest Works
             </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.button variants={textVariants} onClick={scrollToContact}>
+              Contact Us
+            </motion.button>
           </motion.div>
           <motion.img
             variants={textVariants}
@@ -82,8 +91,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-ACV LEGAL
-
+        ACV LEGAL
       </motion.div>
       <div className="imageContainer">
         <motion.img

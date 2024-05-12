@@ -25,7 +25,7 @@ const itemVariants = {
 };
 
 const Links = ({ handleCloseSidebar }) => {
-  const items = ["Home", "Services", "Our Team", "Contact", "About"];
+  const items = ["Home", "Services", "Our Team", "Contact"];
 
   const handleLinkClick = () => {
     handleCloseSidebar();

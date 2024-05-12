@@ -7,17 +7,17 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer-content">
                 <div className="footer-icon">
-                    <a href="https://wa.me/1234567890">
+                    <a href="https://wa.me/+918527573521">
                         <FaWhatsapp />
                     </a>
                 </div>
                 <div className="footer-icon">
-                    <a href="tel:+1234567890">
+                    <a href="tel: +918527573521">
                         <FaPhone />
                     </a>
                 </div>
                 <div className="footer-icon">
-                    <a href="mailto:info@example.com">
+                    <a href="mailto:sanskar@gmail.com">
                         <FaEnvelope />
                     </a>
                 </div>

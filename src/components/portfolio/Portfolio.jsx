@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import "./portfolio.scss";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 
 const teamMembers = [
   {
@@ -9,8 +9,7 @@ const teamMembers = [
     img: "/ashwain_mishra.jpeg",
     position: "Senior Attorney",
     expertise: "Criminal Defense, Family Law",
-    email: "ashwain@example.com",
-    phone: "123-456-7890",
+    details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius repellat unde ipsam. Animi iure tempora dolore fugit deleniti unde dignissimos eligendi ipsum odio nemo molestiae voluptatibus fuga commodi, sit eos!"
   },
   {
     id: 2,
@@ -18,8 +17,7 @@ const teamMembers = [
     img: "/vaidruti_mishra.jpeg",
     position: "Associate Attorney",
     expertise: "Business Law, Contract Law",
-    email: "vaidruti@example.com",
-    phone: "123-456-7890",
+    details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius repellat unde ipsam. Animi iure tempora dolore fugit deleniti unde dignissimos eligendi ipsum odio nemo molestiae voluptatibus fuga commodi, sit eos!"
   },
   {
     id: 3,
@@ -27,8 +25,7 @@ const teamMembers = [
     img: "/rakesh_soni.jpeg",
     position: "Legal Consultant",
     expertise: "Personal Injury, Employment Law",
-    email: "rakesh@example.com",
-    phone: "123-456-7890",
+    details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius repellat unde ipsam. Animi iure tempora dolore fugit deleniti unde dignissimos eligendi ipsum odio nemo molestiae voluptatibus fuga commodi, sit eos!"
   },
   {
     id: 4,
@@ -36,8 +33,7 @@ const teamMembers = [
     img: "/sharad_rai.jpeg",
     position: "Senior Partner",
     expertise: "Real Estate Law, Estate Planning",
-    email: "sharad@example.com",
-    phone: "123-456-7890",
+    details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius repellat unde ipsam. Animi iure tempora dolore fugit deleniti unde dignissimos eligendi ipsum odio nemo molestiae voluptatibus fuga commodi, sit eos!"
   },
 ];
 
@@ -58,24 +54,38 @@ const TeamMember = ({ member }) => {
           <motion.div className="imageContainer" style={{ y }}>
             <img src={member.img} alt={member.name} className="images" />
           </motion.div>
-          <div
+          <motion.div
             className={`textContainer mt ${isHovered ? "hovered" : ""}`}
             ref={ref}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
             onMouseLeave={() => setIsHovered(false)}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
           >
             <h2>{member.name}</h2>
             <p>{member.position}</p>
             <p>Areas of Expertise: {member.expertise}</p>
-            {isHovered && (
-              <div className="details">
-                <p>Email: {member.email}</p>
-                <p>Phone: {member.phone}</p>
-              </div>
-            )}
-            <button 
+            <AnimatePresence>
+              {isHovered && (
+                <motion.div
+                  className="details"
+                  style={{ overflowY: "hidden" }}
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                >
+                  <p>{member.details}</p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+            <button
               onMouseEnter={() => setIsHovered(true)}
-            >Contact {member.name}</button>
-          </div>
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              Show details
+            </button>
+          </motion.div>
         </div>
       </div>
     </section>
@@ -89,10 +99,7 @@ const Portfolio = () => {
         <h1>Our Team</h1>
       </div>
       {teamMembers.map((member) => (
-        <TeamMember
-          key={member.id}
-          member={member}
-        />
+        <TeamMember key={member.id} member={member} />
       ))}
     </div>
   );

@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import "./services.scss";
 import { motion, useAnimation } from "framer-motion";
@@ -6,8 +7,13 @@ const Services = () => {
   const textAnimation = useAnimation();
   const titleAnimation = useAnimation();
   const listAnimation = useAnimation();
+  const handleClick = () => {
+   const contact= document.getElementById("Contact")
+    contact.scrollIntoView({ behavior: 'smooth' })
 
+  }
   useEffect(() => {
+   
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
@@ -36,13 +42,14 @@ const Services = () => {
     <div className="services">
       <motion.div className="textContainer" initial={{ opacity: 0, y: 100 }} animate={textAnimation} transition={{ duration: 1 }}>
         <p>
-          Welcome to our law firm, where we provide comprehensive legal solutions to protect your rights and interests. With a team of experienced lawyers, we are dedicated to serving you with professionalism and integrity.
+          At our law firm, we provide comprehensive legal solutions to protect
+          your rights and interests.
         </p>
         <hr />
       </motion.div>
       <motion.div className="titleContainer" initial={{ opacity: 0, y: 50 }} animate={titleAnimation} transition={{ duration: 1 }}>
         <div className="title">
-          <img src="https://m.media-amazon.com/images/I/516ejz7VgML._AC_UY1100_.jpg" alt=""  className="advocate"/>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDGE7aRm9DDfxgNQCEC8MOc40EfuslLygkjA&usqp=CAU" alt="" />
           <h1>
             <b>Experienced</b> Lawyers
           </h1>
@@ -51,10 +58,44 @@ const Services = () => {
           <h1>
             <b>For Your</b> Legal Needs
           </h1>
-          <button>LEARN MORE</button>
+          <button onClick={handleClick}>LEARN MORE</button>
         </div>
       </motion.div>
-     
+      <motion.div className="listContainer" initial={{ opacity: 0, y: 50 }} animate={listAnimation} transition={{ duration: 1 }}>
+        <motion.div className="box" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <h2>Personal Injury</h2>
+          <p>
+            Our personal injury attorneys fight for fair compensation for
+            victims of accidents and negligence.
+          </p>
+          <button onClick={handleClick}>Consult Now</button>
+        </motion.div>
+        <motion.div className="box" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <h2>Criminal Defense</h2>
+          <p>
+            Facing criminal charges? Our defense lawyers provide aggressive
+            representation to protect your rights and freedom.
+          </p>
+          <button onClick={handleClick}>Get Legal Help</button>
+        </motion.div>
+        <motion.div className="box" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <h2>Family Law</h2>
+          <p>
+            From divorce to child custody disputes, our family law attorneys
+            offer compassionate support and legal guidance during difficult
+            times.
+          </p>
+          <button onClick={handleClick}>Learn More</button>
+        </motion.div>
+        <motion.div className="box" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <h2>Business Law</h2>
+          <p>
+            Our business lawyers assist with contracts, disputes, and other
+            legal matters to help your business thrive and succeed.
+          </p>
+          <button onClick={handleClick}>Consultation</button>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

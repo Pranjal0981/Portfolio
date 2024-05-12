@@ -25,6 +25,12 @@ section {
   scroll-snap-align: center;
   overflow: hidden;
 }
+#Services,#Work{
+  height: 70vh;
+}
+#Contact{
+  height: 140vh;
+}
 .footer{
   height: 20vh;
 }
