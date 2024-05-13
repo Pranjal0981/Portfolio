@@ -179,7 +179,7 @@
 
       p {
         @include mobile {
-          display: flex;
+          display: block;
         }
       }
 

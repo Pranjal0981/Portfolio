@@ -87,14 +87,7 @@ const Services = () => {
           </p>
           <button onClick={handleClick}>Learn More</button>
         </motion.div>
-        <motion.div className="box" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <h2>Business Law</h2>
-          <p>
-            Our business lawyers assist with contracts, disputes, and other
-            legal matters to help your business thrive and succeed.
-          </p>
-          <button onClick={handleClick}>Consultation</button>
-        </motion.div>
+       
       </motion.div>
     </div>
   );
