@@ -1,108 +1,116 @@
-import { useRef, useState } from "react";
-import "./portfolio.scss";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import React from 'react';
+import './portfolio.scss';
 
-const teamMembers = [
-  {
-    id: 1,
-    name: "Adv. Ashwain Mishra",
-    img: "/ashwain_mishra.jpeg",
-    position: "Senior Attorney",
-    expertise: "Criminal Defense, Family Law",
-    details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius repellat unde ipsam. Animi iure tempora dolore fugit deleniti unde dignissimos eligendi ipsum odio nemo molestiae voluptatibus fuga commodi, sit eos!"
-  },
-  {
-    id: 2,
-    name: "Adv. Vaidruti Mishra",
-    img: "/vaidruti_mishra.jpeg",
-    position: "Associate Attorney",
-    expertise: "Business Law, Contract Law",
-    details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius repellat unde ipsam. Animi iure tempora dolore fugit deleniti unde dignissimos eligendi ipsum odio nemo molestiae voluptatibus fuga commodi, sit eos!"
-  },
-  {
-    id: 3,
-    name: "Adv Rakesh Soni",
-    img: "/rakesh_soni.jpeg",
-    position: "Legal Consultant",
-    expertise: "Personal Injury, Employment Law",
-    details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius repellat unde ipsam. Animi iure tempora dolore fugit deleniti unde dignissimos eligendi ipsum odio nemo molestiae voluptatibus fuga commodi, sit eos!"
-  },
-  {
-    id: 4,
-    name: "Adv. Sharad Rai",
-    img: "/sharad_rai.jpeg",
-    position: "Senior Partner",
-    expertise: "Real Estate Law, Estate Planning",
-    details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius repellat unde ipsam. Animi iure tempora dolore fugit deleniti unde dignissimos eligendi ipsum odio nemo molestiae voluptatibus fuga commodi, sit eos!"
-  },
-];
-
-const TeamMember = ({ member }) => {
-  const ref = useRef();
-  const [isHovered, setIsHovered] = useState(false);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
-
+const TeamMember = () => {
   return (
-    <section>
-      <div className="container">
-        <div className="wrapper">
-          <motion.div className="imageContainer" style={{ y }}>
-            <img src={member.img} alt={member.name} className="images" />
-          </motion.div>
-          <motion.div
-            className={`textContainer mt ${isHovered ? "hovered" : ""}`}
-            ref={ref}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            onMouseLeave={() => setIsHovered(false)}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-          >
-            <h2>{member.name}</h2>
-            <p>{member.position}</p>
-            <p>Areas of Expertise: {member.expertise}</p>
-            <AnimatePresence>
-              {isHovered && (
-                <motion.div
-                  className="details"
-                  style={{ overflowY: "hidden" }}
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                >
-                  <p>{member.details}</p>
-                </motion.div>
-              )}
-            </AnimatePresence>
-            <button
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              Show details
-            </button>
-          </motion.div>
+    <div className="wrapper">
+      <div className="title">
+        <h4>Our Team</h4>
+      </div>
+
+      <div className="card_Container">
+        <div className="card">
+          <div className="imbBx">
+            <img src="./ashwain_mishra.jpeg" alt="" />
+          </div>
+          <div className="content">
+            <div className="contentBx">
+              <h3>
+                Ashwain Mishra <br />
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, fugiat quidem! Nemo sequi minima maiores assumenda iusto rem perspiciatis sunt.</span>
+              </h3>
+            </div>
+            <ul className="sci">
+              <li style={{ '--i': 1 }}>
+                <a href="#"><i className="fab fa-instagram"></i></a>
+              </li>
+              <li style={{ '--i': 2 }}>
+                <a href="#"><i className="fab fa-github"></i></a>
+              </li>
+              <li style={{ '--i': 3 }}>
+                <a href="#"><i className="fab fa-linkedin-in"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="imbBx">
+            <img src="./vaidruti_mishra.jpeg" alt="" />
+          </div>
+          <div className="content">
+            <div className="contentBx">
+              <h3>
+               Vaidruti Mishra <br />
+                <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas eligendi facilis itaque earum hic obcaecati sequi dolor a quia voluptatibus.</span>
+              </h3>
+            </div>
+            <ul className="sci">
+              <li style={{ '--i': 1 }}>
+                <a href="#"><i className="fab fa-instagram"></i></a>
+              </li>
+              <li style={{ '--i': 2 }}>
+                <a href="#"><i className="fab fa-github"></i></a>
+              </li>
+              <li style={{ '--i': 3 }}>
+                <a href="#"><i className="fab fa-linkedin-in"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="imbBx">
+            <img src="./rakesh_soni.jpeg" alt="" />
+          </div>
+          <div className="content">
+            <div className="contentBx">
+              <h3>
+               Rakesh Soni <br />
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium asperiores ducimus facilis velit pariatur repellendus temporibus voluptatum, rem delectus animi.</span>
+              </h3>
+            </div>
+            <ul className="sci">
+              <li style={{ '--i': 1 }}>
+                <a href="#"><i className="fab fa-instagram"></i></a>
+              </li>
+              <li style={{ '--i': 2 }}>
+                <a href="#"><i className="fab fa-github"></i></a>
+              </li>
+              <li style={{ '--i': 3 }}>
+                <a href="#"><i className="fab fa-linkedin-in"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="imbBx">
+            <img src="./sharad_rai.jpeg" alt="" />
+          </div>
+          <div className="content">
+            <div className="contentBx">
+              <h3>
+                Sharad Rai <br />
+                <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse in laboriosam, commodi voluptas at excepturi maiores quibusdam qui! Commodi, quo?</span>
+              </h3>
+            </div>
+            <ul className="sci">
+              <li style={{ '--i': 1 }}>
+                <a href="#"><i className="fab fa-instagram"></i></a>
+              </li>
+              <li style={{ '--i': 2 }}>
+                <a href="#"><i className="fab fa-github"></i></a>
+              </li>
+              <li style={{ '--i': 3 }}>
+                <a href="#"><i className="fab fa-linkedin-in"></i></a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </section>
-  );
-};
-
-const Portfolio = () => {
-  return (
-    <div className="portfolio">
-      <div className="progress">
-        <h1>Our Team</h1>
-      </div>
-      {teamMembers.map((member) => (
-        <TeamMember key={member.id} member={member} />
-      ))}
     </div>
   );
 };
 
-export default Portfolio;
+export default TeamMember;

@@ -1,8 +1,14 @@
 import React from "react";
-import "./footer.scss";
 import { FaWhatsapp, FaPhone, FaEnvelope } from "react-icons/fa";
+import supremeCourtLogo from "/supreme_court.jpeg";
+
+import "./footer.scss"; // Import footer styles here
 
 const Footer = () => {
+    const handleSupremeCourtClick = () => {
+        window.location.href = "https://supremecourtofindia.nic.in/";
+    };
+
     return (
         <footer className="footer">
             <div className="footer-content">
@@ -11,8 +17,15 @@ const Footer = () => {
                         <FaWhatsapp />
                     </a>
                 </div>
+                <div className="footer-icon" onClick={handleSupremeCourtClick}>
+                    <img
+                        src={supremeCourtLogo}
+                        className="supreme_logo"
+                        alt="Supreme Court Logo"
+                    />
+                </div>
                 <div className="footer-icon">
-                    <a href="tel: +918527573521">
+                    <a href="tel:+918527573521">
                         <FaPhone />
                     </a>
                 </div>

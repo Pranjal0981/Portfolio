@@ -28,7 +28,7 @@
 
             p {
                 @include mobile {
-                    display: none;
+                    display: flex;
                 }
             }
 

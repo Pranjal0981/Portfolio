@@ -1,25 +1,19 @@
-.foot{
-    width: 100%;
-}
-
 .footer {
     background-color: #333;
     color: #fff;
-    padding: 40px 0;
+    padding: 20px 0;
     text-align: center;
     position: fixed;
-    bottom: 0;   
+    bottom: 0;
     width: 100%;
     z-index: 100;
-
-
 }
 
 .footer-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .footer-icon {
@@ -35,7 +29,16 @@
 .footer-icon a:hover {
     transform: translateY(-3px);
 }
+
 .footer p {
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
+}
+
+.supreme_logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    /* Add cursor pointer to indicate clickability */
 }
