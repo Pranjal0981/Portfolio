@@ -15,7 +15,7 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 export default function App() {
     return (
         <>
-            <h1 className="gallery-title"> Gallery</h1>
+            <h1 className="gallery-title" id='Gallery'> Gallery</h1>
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}
