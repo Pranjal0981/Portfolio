@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import "./services.scss";
 import { motion, useAnimation } from "framer-motion";
+import Slider from "./Slider";
 
 const Services = () => {
   const textAnimation = useAnimation();
@@ -87,8 +88,9 @@ const Services = () => {
           </p>
           <button onClick={handleClick}>Learn More</button>
         </motion.div>
-       
       </motion.div>
+      <Slider />
+
     </div>
   );
 };

@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="footer-content">
                 <div className="footer-icon">
                     <a href="https://wa.me/+918527573521">
-                        <FaWhatsapp />
+                        <img src="/whatsapp.png" width={45} height={45} alt="" />
                     </a>
                 </div>
                 <div className="footer-icon" onClick={handleSupremeCourtClick}>
@@ -26,12 +26,12 @@ const Footer = () => {
                 </div>
                 <div className="footer-icon">
                     <a href="tel:+918527573521">
-                        <FaPhone />
+                        <img src="/dialer.png" width={30} height={30} alt="" />
                     </a>
                 </div>
                 <div className="footer-icon">
                     <a href="mailto:sanskar@gmail.com">
-                        <FaEnvelope />
+                        <img src="/mail.png" width={30} height={30} alt="" />
                     </a>
                 </div>
             </div>

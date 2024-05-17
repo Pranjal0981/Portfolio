@@ -26,9 +26,10 @@ section {
   overflow: hidden;
 }
 
+
 #Services,
 #Work {
-  height: 70vh;
+  height: 100vh;
 }
 
 #Contact {
@@ -36,7 +37,7 @@ section {
 }
 
 .footer {
-  height: 20vh;
+  height: 14vh;
 }
 
 @mixin mobile {
@@ -56,13 +57,21 @@ section {
     @content;
   }
 }
-
+ #services-cont {
+   height: 130vh;
+   width: 100vw;
+   
+ }
 /* Adjusting #Services and #Work for mobile devices */
 @include mobile {
 
   #Services,
   #Work {
-    height: 29vh;
+    height: 30vh;
     // Change the height to 100vh for better visibility on smaller screens
   }
+    #services-cont {
+      height: 170vh;
+      width: 100vw;
+    }
 }
