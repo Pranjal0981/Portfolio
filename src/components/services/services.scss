@@ -1,4 +1,5 @@
 @import "../../app.scss";
+
 .box {
   padding: 50px;
   border: 0.5px solid gray;
@@ -6,11 +7,8 @@
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  /* Add transition for smooth effect */
 
   &:hover {
-    transform: translateY(-5px);
-    /* Move up on hover */
     background-color: #ffffcc;
     /* Light yellow background color on hover */
     color: #333333;
@@ -35,12 +33,17 @@
     background-color: orange;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    /* Add transition for smooth effect */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
 
     &:hover {
-      background-color: #ff6347;
+      background-color: #c49f52;
       /* Change background color on hover */
+      transform: translateY(-3px);
+      /* Slightly move the button up */
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      /* Add shadow effect */
+      color: #fff;
+      /* Change text color on hover */
     }
 
     @include mobile {
@@ -53,7 +56,24 @@
     }
   }
 }
-
+.title button{
+  padding: 10px;
+    background-color: rgb(136, 88, 0);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+  
+    &:hover {
+      background-color: #765101;
+      /* Change background color on hover */
+      transform: translateY(-3px);
+      /* Slightly move the button up */
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      /* Add shadow effect */
+      color: #fff;
+      /* Change text color on hover */
+    }
+}
 .services {
   background: linear-gradient(180deg, #0c0c1d, #111132);
   display: flex;

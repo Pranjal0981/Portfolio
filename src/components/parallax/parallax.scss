@@ -13,7 +13,7 @@
     font-size: 100px;
     position: relative;
     z-index: 100;
-    color: rgba(246, 208, 18, 0.944);
+    color: #C49F52;
 
     @include mobile {
       font-size: 72px;
@@ -39,7 +39,6 @@
   }
 
   .sun {
-    background-position: bottom;
     z-index: 2;
     opacity: 0.5; // Adjust the opacity value as needed
   }
