@@ -89,7 +89,6 @@ const Services = () => {
           <button onClick={handleClick}>Learn More</button>
         </motion.div>
       </motion.div>
-      <Slider />
 
     </div>
   );

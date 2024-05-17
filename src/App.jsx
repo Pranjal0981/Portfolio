@@ -8,6 +8,7 @@ import Navbar from "./components/navbar/Navbar";
 import Parallax from "./components/parallax/Parallax";
 import Portfolio from "./components/portfolio/Portfolio";
 import Services from "./components/services/Services";
+import Slider from "./components/services/Slider";
 import Work from "./components/whatwedid/Work";
 
 const App = () => {
@@ -23,6 +24,10 @@ const App = () => {
       </section>
       <section id="services-cont">
         <Services />
+      </section>
+      <section id="slider">
+      <Slider/>
+
       </section>
       <section id="Work">
         <Parallax type="Work" />

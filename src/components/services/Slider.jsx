@@ -12,7 +12,7 @@ import './Slider.scss';
 // Import required modules
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 
-export default function App() {
+export default function Slider() {
     return (
         <>
             <h1 className="gallery-title" id='Gallery'> Gallery</h1>

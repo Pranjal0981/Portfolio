@@ -17,9 +17,10 @@ const TeamMember = () => {
             <div className="contentBx">
               <h3>
                 Vaidruti Mishra <br />
-                <span>Adv. Ashwain mishra
-                  Expertise -government cases , family law , criminal law
-                  Pratice in high court as well as supreme.</span>
+                <span>Expertise -coporate settlements , family law , land and legal matters
+                  Pratices in high  court
+                  as well as supreme court
+                  Advocate on record for  supreme court</span>
               </h3>
             </div>
             <ul className="sci">
@@ -72,9 +73,8 @@ const TeamMember = () => {
             <div className="contentBx">
               <h3>
                Rakesh Soni <br />
-                <span>Adv. Ashwain mishra
-                  Expertise-government cases , family law , criminal law
-                  Pratice in high court as well as supreme</span>
+                <span>Expertise -dispute settlement  expert and financial  law
+                  Practices in all courts</span>
               </h3>
             </div>
             <ul className="sci">
