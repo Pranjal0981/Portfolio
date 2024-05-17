@@ -25,13 +25,17 @@ section {
   scroll-snap-align: center;
   overflow: hidden;
 }
-#Services,#Work{
+
+#Services,
+#Work {
   height: 70vh;
 }
-#Contact{
+
+#Contact {
   height: 140vh;
 }
-.footer{
+
+.footer {
   height: 20vh;
 }
 
@@ -40,13 +44,25 @@ section {
     @content;
   }
 }
+
 @mixin tablet {
   @media (max-width: 1024px) {
     @content;
   }
 }
+
 @mixin desktop {
   @media (max-width: 1366px) {
     @content;
+  }
+}
+
+/* Adjusting #Services and #Work for mobile devices */
+@include mobile {
+
+  #Services,
+  #Work {
+    height: 37vh;
+    // Change the height to 100vh for better visibility on smaller screens
   }
 }
