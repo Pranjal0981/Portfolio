@@ -25,7 +25,7 @@ const Parallax = ({ type }) => {
             : "radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%)",
       }}
     >
-      <motion.h1 style={{ y: yText }}>
+      <motion.h1 style={{ y: yText ,fontSize:'60px'}}>
         {type === "services" ? "Our Services" : "What We Did?"}
       </motion.h1>
       <motion.div
