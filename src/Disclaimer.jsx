@@ -1,5 +1,5 @@
 import React from 'react';
-import './Disclaimer.scss';
+import './disclaimer.scss';
 
 const Disclaimer = ({ show, onClose }) => {
     if (!show) {
