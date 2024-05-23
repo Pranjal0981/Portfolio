@@ -13,21 +13,16 @@ const Navbar = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          website
+          
         </motion.span>
         <div className="social">
-          <a href="#">
+          <a href="https://www.facebook.com/vaidruti.misra.9">
             <img src="/facebook.png" alt="" />
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com/vaidruti_mishra?igsh=OGJ3aG4yaG9zYjU2">
             <img src="/instagram.png" alt="" />
           </a>
-          <a href="#">
-            <img src="/youtube.png" alt="" />
-          </a>
-          <a href="#">
-            <img src="/dribbble.png" alt="" />
-          </a>
+         
         </div>
       </div>
     </div>

@@ -87,9 +87,10 @@ body {
   transition-delay: 0s;
 }
 
-.content .contentBx h3 {
+.content .contentBx h1 {
   text-transform: uppercase;
   font-weight: bolder;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   letter-spacing: 2px;
   font-size: 18px;
   text-align: center;
@@ -103,12 +104,12 @@ color: #000;
 }
 
 
-.card:hover .content .contentBx h3 {
+.card:hover .content .contentBx h1 {
   opacity: 1;
   transform: translateY(0);
 }
 
-.content .contentBx h3 span {
+.content .contentBx h1 span {
   font-size: 15px;
   font-weight: bold;
   text-transform: initial;

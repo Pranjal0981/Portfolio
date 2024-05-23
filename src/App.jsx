@@ -10,10 +10,22 @@ import Portfolio from "./components/portfolio/Portfolio";
 import Services from "./components/services/Services";
 import Slider from "./components/services/Slider";
 import Work from "./components/whatwedid/Work";
-
+import Disclaimer from "./Disclaimer";
+import { useEffect, useState } from "react";
 const App = () => {
+  const [showDisclaimer, setShowDisclaimer] = useState(true);
+
+  const handleDisclaimerClose = () => {
+    setShowDisclaimer(false);
+  };
+  useEffect(() => {
+    // Show disclaimer on component mount
+    setShowDisclaimer(true);
+  }, []);
   return (
     <div>
+      <Disclaimer show={showDisclaimer} onClose={handleDisclaimerClose} />  {/* Add Disclaimer */}
+
       <Cursor />
       <section id="Home">
         <Navbar />

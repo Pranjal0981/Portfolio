@@ -67,8 +67,8 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>WE ARE ACV-LEGAL</motion.h2>
-          <motion.h1 variants={textVariants}>"ACV - LEGAL"</motion.h1>
+          <motion.h2 variants={textVariants}>WE ARE ACV LEGAL</motion.h2>
+          <motion.h1 variants={textVariants}>"ACV  LEGAL"</motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <motion.button variants={textVariants} onClick={scrollToWork}>
               See the Latest Works

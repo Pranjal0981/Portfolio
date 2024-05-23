@@ -14,6 +14,11 @@ import './Slider.scss';
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 
 export default function Slider() {
+    // Define the number of slides you have
+    const numberOfSlides = 7;
+    // Generate a random index between 0 and numberOfSlides - 1
+    const randomInitialSlide = Math.floor(Math.random() * numberOfSlides);
+
     return (
         <>
             <h1 className="gallery-title" id='Gallery'> Gallery</h1>
@@ -22,6 +27,7 @@ export default function Slider() {
                 grabCursor={true}
                 centeredSlides={true}
                 slidesPerView={'auto'}
+                initialSlide={randomInitialSlide} // Set the random initial slide
                 coverflowEffect={{
                     rotate: 30,
                     stretch: 10,
@@ -40,9 +46,6 @@ export default function Slider() {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <img src="/slide1.jpeg" alt="Nature 1" />
-                </SwiperSlide>
-                <SwiperSlide>
                     <img src="/slide2.jpeg" alt="Nature 2" />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -50,6 +53,18 @@ export default function Slider() {
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src="/slide4.jpeg" alt="Nature 4" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/slide5.jpeg" alt="Nature 4" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/slide6.jpeg" alt="Nature 4" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/slide7.jpeg" alt="Nature 4" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/slide8.jpeg" alt="Nature 4" />
                 </SwiperSlide>
             </Swiper>
         </>

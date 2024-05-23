@@ -47,8 +47,7 @@ const Services = () => {
         transition={{ duration: 1 }}
       >
         <p>
-          At our law firm, we provide comprehensive legal solutions to protect
-          your rights and interests.
+          At our law firm, we offer comprehensive legal solutions designed to protect your rights and interests. Whether you are facing a complex legal challenge or simply need expert advice, our dedicated team is here to provide the guidance and support you need. With our extensive experience and commitment to excellence, we ensure that your legal matters are handled with the utmost professionalism and care. 
         </p>
         <hr />
       </motion.div>
@@ -85,38 +84,122 @@ const Services = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <h2>Personal Injury</h2>
+          <h2>Consultation and Advice</h2>
           <p>
-            Our personal injury attorneys fight for fair compensation for
-            victims of accidents and negligence.
+            Initial legal advice on a particular issue.
+Guidance on the legal implications of actions or decisions.
           </p>
           <button onClick={handleClick}>Consult Now</button>
         </motion.div>
+
+
+
         <motion.div
           className="box"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <h2>Criminal Defense</h2>
+          <h2>Document Preparation</h2>
           <p>
-            Facing criminal charges? Our defense lawyers provide aggressive
-            representation to protect your rights and freedom.
+            Drafting contracts, wills, trusts, and other legal documents.
+            Reviewing and revising documents to ensure they meet legal standards
           </p>
-          <button onClick={handleClick}>Get Legal Help</button>
+          <button onClick={handleClick}>Consult Now</button>
         </motion.div>
+
         <motion.div
           className="box"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <h2>Family Law</h2>
+          <h2>Representation in Court</h2>
           <p>
-            From divorce to child custody disputes, our family law attorneys
-            offer compassionate support and legal guidance during difficult
-            times.
+            Representing clients in civil, criminal, and family court cases.
+Handling litigation, including filing lawsuits, responding to lawsuits, and representing clients during trials.
           </p>
-          <button onClick={handleClick}>Learn More</button>
+          <button onClick={handleClick}>Consult Now</button>
         </motion.div>
+
+        <motion.div
+          className="box"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <h2>Negotiation and Mediation</h2>
+          <p>
+            Negotiating settlements in disputes or legal matters.
+            Acting as mediators to help parties reach a resolution outside of court.
+          </p>
+          <button onClick={handleClick}>Consult Now</button>
+        </motion.div>
+
+        
+   
+    
+      </motion.div>
+
+
+      <motion.div
+        className="listContainer"
+        initial={{ opacity: 0, y: 50 }}
+        animate={listAnimation}
+        transition={{ duration: 1 }}
+      >
+        <motion.div
+          className="box"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <h2>Transaction Assistance</h2>
+          <p>
+            Assisting in real estate transactions, mergers, and acquisitions.
+            Advising on business formation, such as incorporating a company.
+
+          </p>
+          <button onClick={handleClick}>Consult Now</button>
+        </motion.div>
+
+        <motion.div
+          className="box"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <h2>Specialized Legal Services
+</h2>
+          <p>
+            Intellectual property protection, including patents, trademarks, and copyrights. Protecting your things to yourself only.
+          </p>
+          <button onClick={handleClick}>Consult Now</button>
+        </motion.div>
+
+        <motion.div
+          className="box"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <h2>Family law </h2>
+          <p>
+            Contested and Uncontested Divorce: Handling both contested divorces, where parties disagree on terms, and uncontested divorces, where both parties agree.
+          </p>
+          <button onClick={handleClick}>Consult Now</button>
+        </motion.div>
+
+        <motion.div
+          className="box"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <h2>Tax law advice 
+</h2>
+          <p>
+            Individual Tax Planning: Helping individuals plan their taxes to minimize liabilities, including advice on deductions, credits etc..........
+          </p>
+          <button onClick={handleClick}>Consult Now</button>
+        </motion.div>
+
+
+
+
       </motion.div>
     </div>
   );
