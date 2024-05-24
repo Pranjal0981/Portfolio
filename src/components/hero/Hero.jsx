@@ -24,16 +24,17 @@ const textVariants = {
     },
   },
 };
+
 const sliderVariants = {
   initial: {
-    x: 0,
+    x: "100%", // Start off-screen to the right
   },
   animate: {
-    x: "-220%",
+    x: "-100%", // Move to off-screen to the left
     transition: {
       repeat: Infinity,
-      repeatType: "mirror",
       duration: 20,
+      ease: "linear", // Linear easing for smooth motion
     },
   },
 };
@@ -54,10 +55,12 @@ const Hero = () => {
     const contactSection = document.getElementById("Contact");
     contactSection.scrollIntoView({ behavior: "smooth" });
   };
-  const scrollToWork=()=>{
-    const Work=document.getElementById('Work')
-    Work.scrollIntoView({behavior:'smooth'})
-  }
+
+  const scrollToWork = () => {
+    const Work = document.getElementById("Work");
+    Work.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="hero">
       <div className="wrapper">

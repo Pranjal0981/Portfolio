@@ -16,7 +16,7 @@ const TeamMember = () => {
           <div className="content">
             <div className="contentBx">
               <h1>
-                Aor. Vaidruti Mishra <br />
+                Adv. Vaidruti Mishra <br />
                 <span>Advocate On Record
                   Supreme Court Of India
                   Expertises- In Coporate settlements , Family Law,Criminal Cases, Civil Cases and Dispute Resolution matters and Arbitration cases.</span>

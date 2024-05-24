@@ -58,10 +58,7 @@ const Services = () => {
         transition={{ duration: 1 }}
       >
         <div className="title">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDGE7aRm9DDfxgNQCEC8MOc40EfuslLygkjA&usqp=CAU"
-            alt=""
-          />
+        
           <h1>
             <b>Experienced</b> Lawyers
           </h1>

@@ -24,7 +24,7 @@ const Parallax = ({ type }) => {
       }}
     >
       <motion.h1 style={{ y: yText ,fontSize:'60px'}}>
-        {type === "services" ? "Our Services" : "What We Deal in"}
+        {type === "services" ? "Our Services" : "What We Deal In"}
       </motion.h1>
       <div>
         <img src="/scroll.png" />
