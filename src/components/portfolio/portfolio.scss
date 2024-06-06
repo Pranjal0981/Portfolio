@@ -23,7 +23,8 @@ body {
 .title h4 {
   display: inline-block;
   padding: 20px;
-  color: #C49F52;;
+  color: #C49F52;
+  ;
   font-size: 50px;
   font-weight: 500;
   letter-spacing: 1.2px;
@@ -45,11 +46,20 @@ body {
   margin: 40px 0;
 }
 
+.card-con {
+  display: flex;
+  flex-wrap: wrap;
+  /* Add flex-wrap property */
+}
+
 .card_Container .card {
   position: relative;
-  width: 300px;
-  height: 400px;
+  width: calc(100% - 40px);
+  /* Adjust the width to make it 100% */
+  max-width: 300px;
+  /* Limit the width */
   margin: 20px;
+  /* Add margin */
   overflow: hidden;
   box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 1),
     inset 0 0 0 1000px rgba(67, 52, 109, .6);
@@ -100,9 +110,8 @@ body {
   transition-delay: 0.6s;
   opacity: 0;
   transform: translateY(-20px);
-color: #000;
+  color: #000;
 }
-
 
 .card:hover .content .contentBx h1 {
   opacity: 1;
