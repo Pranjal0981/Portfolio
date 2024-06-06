@@ -140,6 +140,31 @@ const TeamMember = () => {
             </ul>
           </div>
         </div>
+        <div className="card">
+          <div className="imbBx">
+            <img src="./amit_kumar.jpeg" alt="" />
+          </div>
+          <div className="content">
+            <div className="contentBx">
+              <h1>
+                Adv. Amit Kumar
+                <br />
+                <span>Expertise -Civil law , family law , criminal law Pratices In  High Courts and district courts   all over India</span>
+              </h1>
+            </div>
+            <ul className="sci">
+              <li style={{ '--i': 1 }}>
+                <a href="#"><i className="fab fa-instagram"></i></a>
+              </li>
+              <li style={{ '--i': 2 }}>
+                <a href="#"><i className="fab fa-github"></i></a>
+              </li>
+              <li style={{ '--i': 3 }}>
+                <a href="#"><i className="fab fa-linkedin-in"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );

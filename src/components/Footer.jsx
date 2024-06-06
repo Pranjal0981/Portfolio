@@ -30,7 +30,7 @@ const Footer = () => {
                     </a>
                 </div>
                 <div className="footer-icon">
-                    <a href="mailto:sanskar@gmail.com">
+                    <a href="mailto:acvlegalservices@gmail.com">
                         <img src="/mail.png" width={30} height={30} alt="" />
                     </a>
                 </div>

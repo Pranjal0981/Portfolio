@@ -64,6 +64,48 @@ export default function Slider() {
                 <SwiperSlide>
                     <img src="/slide8.jpeg" alt="Nature 4" />
                 </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/slide10.jpeg" alt="Nature 4" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/slide11.jpeg" alt="Nature 4" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/slide12.jpeg" alt="Nature 4" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/slide13.jpeg" alt="Nature 4" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/slide14.jpeg" alt="Nature 4" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/slide15.jpeg" alt="Nature 4" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/slide16.jpeg" alt="Nature 4" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/slide17.jpeg" alt="Nature 4" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/slide18.jpeg" alt="Nature 4" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/slide19.jpeg" alt="Nature 4" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/slide20.jpeg" alt="Nature 4" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/slide21.jpeg" alt="Nature 4" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/slide22.jpeg" alt="Nature 4" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/slide23.jpeg" alt="Nature 4" />
+                </SwiperSlide>
             </Swiper>
         </>
     );
