@@ -5,18 +5,19 @@ import './work.scss';
 
 const Work = () => {
     const containerAnimation = useAnimation();
-    const { ref } = useInView({ triggerOnce: true });
+    const { ref, inView } = useInView({ triggerOnce: true });
 
     useEffect(() => {
+        if (inView) {
             containerAnimation.start({
                 opacity: 1,
                 y: 0,
                 transition: {
-                    staggerChildren: 0.05, // Adjust the stagger children timing
+                    duration: 0.3, // Adjust the transition duration
                 },
             });
-        
-    }, [containerAnimation]);
+        }
+    }, [inView, containerAnimation]);
 
     const handleClick = () => {
         const contact = document.getElementById('Contact');
